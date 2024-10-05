@@ -16,18 +16,25 @@ editmenu = Menu(menu)
 menu.add_cascade(label='Edit',menu=editmenu)
 editmenu.add_command(label='Add Component')
 
-# this creates a label widget
-myLabel1 = Label(root, text="Hello World!")
-myLabel2 = Label(root, text="My name is Luca Martinez")
+Label(root, text='Part No.', width = 10).grid(row = 1)
+Label(root, text='Serial No.', width = 10).grid(row = 2)
+E1 = Entry(root, width = 30)
+E2 = Entry(root, width = 30)
+E1.grid(row = 1, column = 1)
+E2.grid(row = 2, column = 1)
 
-# shoves it onto the screen
-myLabel1.grid(row = 0, column = 0)
-myLabel2.grid(row = 1, column = 0)
+button1 = Button(root, text='Add Part', width=10)
+button2 = Button(root, text='Go', width=5, command=root.destroy)
 
-button1 = Button(root, text='Start', width=25)
-button2 = Button(root, text='Stop', width=25, command=root.destroy)
+blank = Label(root, text=' ')
+blank2 = Label(root, text=' ')
+blank3 = Label(root, text=' ')
+blank.grid(row = 0, column = 1)
+blank2.grid(row = 3, column = 1)
+blank3.grid(row = 5, column = 1)
 
-button1.grid(row = 0, column = 1)
-button2.grid(row = 1, column = 1)
+button1.grid(row = 4, column = 0, columnspan = 2)
+button2.grid(row = 6, column = 0, columnspan = 2)
 
+root.geometry("270x180")
 root.mainloop()
