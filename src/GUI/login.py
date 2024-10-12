@@ -22,29 +22,26 @@ parent.geometry("400x250")  # Adjust the size as needed
 # Configure the grid to have weights so widgets can be centered
 parent.grid_rowconfigure(0, weight=1)  # Center vertically
 parent.grid_rowconfigure(4, weight=1)  # Center vertically
-parent.grid_columnconfigure(0, weight=1)  # Center horizontally
-parent.grid_columnconfigure(2, weight=1)  # Center horizontally
+parent.grid_columnconfigure(0, weight=1)  # Space on the left
+parent.grid_columnconfigure(3, weight=1)  # Space on the right
 
 # Create and place the username label and entry
 username_label = tk.Label(parent, text="User ID:")
-username_label.grid(row=1, column=0, sticky="e", padx=10, pady=10)
+username_label.grid(row=1, column=1, sticky="e", padx=10, pady=10)  # Align to right
 
 username_entry = tk.Entry(parent)
-username_entry.grid(row=1, column=1, padx=10, pady=10)
+username_entry.grid(row=1, column=2, padx=10, pady=10)  # Entry box centered
 
 # Create and place the password label and entry
 password_label = tk.Label(parent, text="Password:")
-password_label.grid(row=2, column=0, sticky="e", padx=10, pady=10)
+password_label.grid(row=2, column=1, sticky="e", padx=10, pady=10)  # Align to right
 
 password_entry = tk.Entry(parent, show="*")  # Show asterisks for password
-password_entry.grid(row=2, column=1, padx=10, pady=10)
+password_entry.grid(row=2, column=2, padx=10, pady=10)  # Entry box centered
 
 # Create and place the login button
 login_button = tk.Button(parent, text="Login", command=validate_login)
-login_button.grid(row=3, column=0, columnspan=2, pady=20)
-
-# Center the button horizontally
-parent.grid_columnconfigure(1, weight=1)
+login_button.grid(row=3, column=1, columnspan=2, pady=20)  # Center the button across columns
 
 # Start the Tkinter event loop
 parent.mainloop()
