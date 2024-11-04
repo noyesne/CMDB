@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
+import projectGUI
 
 # Function to validate the login
 def validate_login():
@@ -9,6 +10,8 @@ def validate_login():
     # You can add your own validation logic here
     if userid == "admin" and password == "password":
         messagebox.showinfo("Login Successful", "Welcome, Admin!")
+        parent.destroy()
+        projectGUI.main()
     else:
         messagebox.showerror("Login Failed", "Invalid username or password")
 
