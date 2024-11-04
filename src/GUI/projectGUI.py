@@ -16,6 +16,7 @@ def main():
     editmenu = Menu(menu)
     menu.add_cascade(label='Edit',menu=editmenu)
     editmenu.add_command(label='Add Component')
+    global currentRow
     currentRow = 3
 
     Label(root, text='Part No.', width = 15, font=("Arial", 11)).grid(row = 1, column = 0, sticky = 'e', padx = 10, pady = 5)
