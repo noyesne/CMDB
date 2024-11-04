@@ -10,8 +10,8 @@ When you make modifications and code do the following:
 
 YOU ARE NOW IN THE VIM EDITOR
 4) COPY the branch name 
-5) click the insert button
-6) Write what you modifications you made with a dash in front
+5) click the insert button on KEYBOARD!!!!!! 
+6) Write what modifications you made with a dash in front
 	- EX: "CMDB-branch-name - added file to write commits in git"
 7) check to make sure you are adding the right files
 8) click Ctrl+C
