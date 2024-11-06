@@ -1,0 +1,26 @@
+Hello!
+
+When you make modifications and code do the following:
+
+1) $> git status
+	THIS WILL SHOW ALL OF THE MODIFIED FILES
+2) $> git add <filename> OR git add -A 
+	THIS WILL ADDED SPECIFIC FILES TO A COMMIT OR IF YOU USE -A THIS WILL ADDED ALL MODIFIED FILES
+3) $> git commit 
+
+YOU ARE NOW IN THE VIM EDITOR
+4) COPY the branch name 
+5) click the insert button on KEYBOARD!!!!!! 
+6) Write what modifications you made with a dash in front
+	- EX: "CMDB-branch-name - added file to write commits in git"
+7) check to make sure you are adding the right files
+8) click Ctrl+C
+9) now write ":wq"
+	- if you want to abort the commit write ":qa!"
+
+YOU ARE NOW IN GIT BASH
+10) $> git status (optional)
+	- just to check what you added the right files 
+11) $> git push
+
+NOW YOU COMMITED TO THE BRANCH
