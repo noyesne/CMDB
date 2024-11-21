@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import messagebox
 import projectGUI
 
+
+flag = False
 # Function to validate the login
 def validate_login():
     userid = username_entry.get()
@@ -9,9 +11,7 @@ def validate_login():
 
     # You can add your own validation logic here
     if userid == "admin" and password == "password":
-        messagebox.showinfo("Login Successful", "Welcome, Admin!")
-        parent.destroy()
-        projectGUI.main()
+        parent.quit()
     else:
         messagebox.showerror("Login Failed", "Invalid username or password")
 
@@ -46,5 +46,7 @@ password_entry.grid(row=2, column=2, padx=10, pady=10)  # Entry box centered
 login_button = tk.Button(parent, text="Login", command=validate_login)
 login_button.grid(row=3, column=1, columnspan=2, pady=20)  # Center the button across columns
 
+projectGUI.main()
 # Start the Tkinter event loop
 parent.mainloop()
+
